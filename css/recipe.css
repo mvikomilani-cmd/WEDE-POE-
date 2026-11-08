@@ -1,0 +1,113 @@
+/* =====================================================================
+   recipe.css - extra styles for the Recipes page (recipe.html) only.
+   Loaded after style.css so these rules take priority.
+
+   Mobile  (below 600px)    : recipes stay in a single column.
+   Tablet  (600px - 1024px) : CSS Grid layout and larger text.
+   Desktop (above 1024px)   : the layout from style.css is used.
+   ===================================================================== */
+
+/* ---------- Base (all screen sizes) ---------- */
+
+/* Grid wrapper around the recipe cards: one column by default */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Recipe images scale with their card instead of overflowing it */
+.recipe img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ---------- Tablet: 600px to 1024px ---------- */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  /* Typography: larger, easier-to-read text on tablet */
+  body {
+    font-size: 1.125rem;          /* 18px */
+    line-height: 1.6;
+  }
+
+  main h1 {
+    font-size: 2.5rem;            /* 40px */
+    line-height: 1.2;
+  }
+
+  main .lead {
+    font-size: 1.25rem;           /* 20px */
+  }
+
+  main h2 {
+    font-size: 1.75rem;           /* 28px */
+    line-height: 1.25;
+  }
+
+  main h3 {
+    font-size: 1.3rem;            /* about 21px */
+  }
+
+  main p,
+  main li,
+  main a {
+    font-size: 1.125rem;          /* 18px */
+  }
+
+  .nav-links a {
+    font-size: 1.125rem;
+  }
+
+  /* Recipe list: links laid out in a two-column grid */
+  .recipe-index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 1.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .recipe-index a {
+    display: inline-block;
+    padding: 0.25rem 0;           /* bigger touch target */
+  }
+
+  /* Recipe cards: two-column grid */
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    align-items: stretch;
+  }
+
+  /* Each card stacks its content; the links sit at the bottom
+     so cards in the same row line up neatly */
+  .recipe-grid .recipe {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+  }
+
+  /* Images in a card share the same shape so rows stay even */
+  .recipe-grid .recipe img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  .recipe-grid .recipe ul,
+  .recipe-grid .recipe ol {
+    padding-left: 1.25rem;
+  }
+
+  .recipe-grid .recipe > p:last-child {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+}

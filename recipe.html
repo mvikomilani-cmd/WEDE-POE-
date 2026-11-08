@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page information for the browser and search engines -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Step-by-step recipes for GudEats favourites, including Margherita pizza, Pad Thai, seafood paella and chocolate lava cake.">
+  <title>Recipes | GudEats</title>
+
+  <!-- Shared stylesheet used by every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Recipe page only: tablet grid layout and larger text (loaded after style.css so it can override it) -->
+  <link rel="stylesheet" href="css/recipe.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Header: logo and main navigation (identical on every page) ===== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <!-- Logo links back to the home page -->
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="GudEats logo" class="logo-img" width="56" height="56">
+        <span>
+          <span class="site-title">GudEats</span><br>
+          <span class="tagline">Home of good food</span>
+        </span>
+      </a>
+
+      <!-- Hamburger button opens the menu on small screens (js/script.js) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+
+      <!-- Links to all six pages of the website -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Menu</a></li>
+        <li><a href="recipe.html" aria-current="page">Recipes</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Main content of the Recipes page ===== -->
+  <main>
+    <h1>GudEats recipes</h1>
+    <p class="lead">Cook our favourite dishes at home. Each recipe lists the ingredients, method, preparation time and number of servings.</p>
+
+    <!-- Recipe list: links jump to each recipe further down the page -->
+    <nav class="panel" id="recipe-list" aria-labelledby="recipe-list-heading">
+      <h2 id="recipe-list-heading">Recipe list</h2>
+      <ul class="recipe-index">
+        <li><a href="#margherita-pizza">Classic Margherita Pizza</a></li>
+        <li><a href="#beef-burger">GudEats Signature Beef Burger</a></li>
+        <li><a href="#caesar-salad">Caesar Salad with Grilled Chicken</a></li>
+        <li><a href="#sushi-platter">Sushi Platter (Assorted)</a></li>
+        <li><a href="#pad-thai">Pad Thai (Prawn)</a></li>
+        <li><a href="#tandoori-chicken">Tandoori Chicken Platter</a></li>
+        <li><a href="#seafood-paella">Seafood Paella</a></li>
+        <li><a href="#chocolate-lava-cake">Chocolate Lava Cake</a></li>
+        <li><a href="#avocado-toast">Avocado Toast with Poached Egg</a></li>
+        <li><a href="#grilled-salmon">Grilled Salmon with Lemon Butter</a></li>
+      </ul>
+    </nav>
+
+    <!-- Recipe cards: one column on mobile, a two-column grid on tablet (css/recipe.css) -->
+    <div class="recipe-grid">
+
+    <!-- Recipe: Classic Margherita Pizza -->
+    <article class="recipe" id="margherita-pizza">
+      <img src="images/margherita-pizza.jpg" alt="Margherita pizza with melted mozzarella and fresh basil" width="800" height="300" loading="lazy">
+      <h2>Classic Margherita Pizza</h2>
+      <p>Pizza &middot; Prep: 15 mins &middot; Cook: 8 to 12 mins &middot; Serves: 2</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>300 g pizza dough</li>
+          <li>100 g mozzarella</li>
+          <li>Tomato sauce</li>
+          <li>Fresh basil leaves</li>
+          <li>Olive oil</li>
+          <li>Salt</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Preheat the oven to its highest setting.</li>
+          <li>Stretch the dough to a 25 cm circle.</li>
+          <li>Spread the tomato sauce and add the mozzarella.</li>
+          <li>Bake for 5 to 8 minutes until the crust is charred.</li>
+          <li>Finish with basil and a drizzle of olive oil.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: GudEats Signature Beef Burger -->
+    <article class="recipe" id="beef-burger">
+      <img src="images/beef-burger.jpg" alt="Beef burger with cheddar, lettuce and tomato on a toasted bun" width="800" height="300" loading="lazy">
+      <h2>GudEats Signature Beef Burger</h2>
+      <p>Burgers &middot; Prep: 10 mins &middot; Cook: 8 to 10 mins &middot; Serves: 1</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>200 g beef mince</li>
+          <li>1 burger bun</li>
+          <li>1 slice cheddar</li>
+          <li>Lettuce</li>
+          <li>Tomato</li>
+          <li>Pickles</li>
+          <li>Salt and pepper</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Shape the mince into a patty and season.</li>
+          <li>Grill the patty to your preferred doneness.</li>
+          <li>Toast the bun and assemble the burger with the toppings and sauce.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Caesar Salad with Grilled Chicken -->
+    <article class="recipe" id="caesar-salad">
+      <img src="images/caesar-salad.jpg" alt="Salad bowl with grilled chicken, noodles, red cabbage and carrot" width="800" height="300" loading="lazy">
+      <h2>Caesar Salad with Grilled Chicken</h2>
+      <p>Salads &middot; Prep: 10 mins &middot; Cook: 8 mins &middot; Serves: 2</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Romaine lettuce</li>
+          <li>Grilled chicken breast</li>
+          <li>Parmesan</li>
+          <li>Croutons</li>
+          <li>Caesar dressing</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Toss the lettuce with the dressing.</li>
+          <li>Top with sliced grilled chicken, parmesan and croutons.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Sushi Platter (Assorted) -->
+    <article class="recipe" id="sushi-platter">
+      <img src="images/sushi-platter.jpg" alt="Platter of assorted nigiri and maki sushi" width="800" height="300" loading="lazy">
+      <h2>Sushi Platter (Assorted)</h2>
+      <p>Sushi &middot; Prep: 30 mins &middot; Cook: 0 mins &middot; Serves: 2 to 3</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Sushi rice</li>
+          <li>Fresh fish and seafood</li>
+          <li>Nori sheets</li>
+          <li>Soy sauce</li>
+          <li>Wasabi</li>
+          <li>Pickled ginger</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Prepare the sushi rice and fillings.</li>
+          <li>Roll the maki and shape the nigiri.</li>
+          <li>Arrange on a platter with soy sauce, wasabi and ginger.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Pad Thai (Prawn) -->
+    <article class="recipe" id="pad-thai">
+      <img src="images/pad-thai.jpg" alt="Pad Thai rice noodles with prawns, peanuts and lime" width="800" height="300" loading="lazy">
+      <h2>Pad Thai (Prawn)</h2>
+      <p>Noodles &middot; Prep: 15 mins &middot; Cook: 10 mins &middot; Serves: 2</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Rice noodles</li>
+          <li>Prawns</li>
+          <li>Tamarind paste</li>
+          <li>Peanuts</li>
+          <li>Bean sprouts</li>
+          <li>Eggs</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Soak the noodles in warm water.</li>
+          <li>Stir-fry the prawns, then add the sauce.</li>
+          <li>Toss in the noodles and finish with peanuts and bean sprouts.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Tandoori Chicken Platter -->
+    <article class="recipe" id="tandoori-chicken">
+      <img src="images/tandoori-chicken.jpg" alt="Spiced tandoori chicken pieces served with lemon and coriander" width="800" height="300" loading="lazy">
+      <h2>Tandoori Chicken Platter</h2>
+      <p>Grill &middot; Prep: 20 mins (plus marinating) &middot; Cook: 25 to 30 mins &middot; Serves: 2 to 3</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Chicken pieces</li>
+          <li>Plain yoghurt</li>
+          <li>Tandoori masala</li>
+          <li>Lemon</li>
+          <li>Fresh coriander</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Marinate the chicken in yoghurt and spices for at least 2 hours.</li>
+          <li>Grill or bake until cooked through and slightly charred.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Seafood Paella -->
+    <article class="recipe" id="seafood-paella">
+      <img src="images/seafood-paella.jpg" alt="Pan of saffron seafood paella with mussels and prawns" width="800" height="300" loading="lazy">
+      <h2>Seafood Paella</h2>
+      <p>Rice &middot; Prep: 20 mins &middot; Cook: 30 to 35 mins &middot; Serves: 3 to 4</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Short-grain rice</li>
+          <li>Saffron</li>
+          <li>Mussels</li>
+          <li>Prawns</li>
+          <li>Chorizo</li>
+          <li>Peas</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Fry the onion, garlic and chorizo.</li>
+          <li>Add the rice, saffron and stock.</li>
+          <li>Add the seafood and cook without stirring until the rice is tender.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Chocolate Lava Cake -->
+    <article class="recipe" id="chocolate-lava-cake">
+      <img src="images/chocolate-lava-cake.jpg" alt="Chocolate lava cake with a molten centre" width="800" height="300" loading="lazy">
+      <h2>Chocolate Lava Cake</h2>
+      <p>Dessert &middot; Prep: 15 mins &middot; Cook: 10 to 12 mins &middot; Serves: 2</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Dark chocolate</li>
+          <li>Butter</li>
+          <li>Eggs</li>
+          <li>Sugar</li>
+          <li>Flour</li>
+          <li>Vanilla</li>
+          <li>Ice cream (optional)</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Melt the chocolate and butter together.</li>
+          <li>Whisk in the eggs and sugar, then fold in the flour.</li>
+          <li>Bake for 10 to 12 minutes until the edges are set.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Avocado Toast with Poached Egg -->
+    <article class="recipe" id="avocado-toast">
+      <img src="images/avocado-toast.jpg" alt="Sourdough toast topped with smashed avocado and a poached egg" width="800" height="300" loading="lazy">
+      <h2>Avocado Toast with Poached Egg</h2>
+      <p>Breakfast &middot; Prep: 10 mins &middot; Cook: 6 mins &middot; Serves: 1 to 2</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Sourdough bread</li>
+          <li>1 ripe avocado</li>
+          <li>Eggs</li>
+          <li>Lemon</li>
+          <li>Chilli flakes</li>
+          <li>Salt</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Toast the bread.</li>
+          <li>Mash the avocado with lemon juice and salt.</li>
+          <li>Top with a poached egg and chilli flakes.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+    <!-- Recipe: Grilled Salmon with Lemon Butter -->
+    <article class="recipe" id="grilled-salmon">
+      <img src="images/grilled-salmon.jpg" alt="Grilled salmon fillet with lemon butter and vegetables" width="800" height="300" loading="lazy">
+      <h2>Grilled Salmon with Lemon Butter</h2>
+      <p>Seafood &middot; Prep: 10 mins &middot; Cook: 8 to 12 mins &middot; Serves: 2</p>
+
+      <h3>Ingredients</h3>
+      <ul>
+          <li>Salmon fillets</li>
+          <li>Butter</li>
+          <li>Lemon</li>
+          <li>Salt and pepper</li>
+          <li>Seasonal vegetables</li>
+      </ul>
+
+      <h3>Method</h3>
+      <ol>
+          <li>Season the salmon.</li>
+          <li>Sear skin-side down until crisp.</li>
+          <li>Finish with lemon butter and serve with vegetables.</li>
+      </ol>
+
+      <p><a href="#recipe-list">Back to recipe list</a> &middot; <a href="products.html">Back to menu</a></p>
+    </article>
+
+    </div><!-- /.recipe-grid -->
+  </main>
+
+  <!-- ===== Footer: copyright and quick contact details (identical on every page) ===== -->
+  <footer class="site-footer">
+    <p>GudEats &middot; 12 Bree Street, Cape Town &middot; 15 Cradock Avenue, Rosebank, Johannesburg</p>
+    <p><a href="tel:+27211234567">+27 21 123 4567</a> &middot; <a href="mailto:info@gudeats.co.za">info@gudeats.co.za</a></p>
+    <p>&copy; 2026 GudEats. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
