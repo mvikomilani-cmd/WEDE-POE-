@@ -4,8 +4,7 @@
 
    Mobile  (below 600px)    : recipes stay in a single column.
    Tablet  (600px - 1024px) : CSS Grid layout and larger text.
-   Desktop (above 1024px)   : each recipe is a horizontal grid card with
-                              the photo beside ingredients and method.
+   Desktop (above 1024px)   : recipes shown as cards in a three-column grid.
    ===================================================================== */
 
 /* ---------- Base (all screen sizes) ---------- */
@@ -127,45 +126,45 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* One recipe per row, laid out as a grid:
-       photo | title             title
-       photo | details           details
-       photo | Ingredients       Method
-       photo | ingredient list   method steps
-       photo | links             links
-     Ingredients and method sit side by side, so the short lists
-     no longer leave empty space across the page. */
+  /* Recipe cards: three-column grid view */
+  .recipe-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  /* Each card stacks photo, title, details, ingredients and method;
+     the links sit at the bottom so cards in a row line up */
   .recipe-grid .recipe {
-    display: grid;
-    grid-template-columns: minmax(260px, 2fr) 2fr 3fr;
-    grid-template-rows: auto auto auto 1fr auto;
-    grid-template-areas:
-      "photo title   title"
-      "photo meta    meta"
-      "photo ingh    methh"
-      "photo ing     meth"
-      "photo links   links";
-    column-gap: 2rem;
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    padding: 1.5rem;
+    padding: 1.25rem;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.6);
     box-sizing: border-box;
   }
 
-  .recipe-grid .recipe > img {
-    grid-area: photo;
-    height: 100%;
-    min-height: 260px;
+  /* Same photo shape in every card so rows stay even */
+  .recipe-grid .recipe img {
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    margin-bottom: 0.75rem;
   }
 
-  .recipe-grid .recipe > h2                { grid-area: title; margin: 0 0 0.25rem; }
-  .recipe-grid .recipe > p:first-of-type   { grid-area: meta;  margin: 0 0 0.75rem; }
-  .recipe-grid .recipe > h3:first-of-type  { grid-area: ingh;  margin: 0.5rem 0; }
-  .recipe-grid .recipe > h3:last-of-type   { grid-area: methh; margin: 0.5rem 0; }
-  .recipe-grid .recipe > ul                { grid-area: ing;   margin: 0; padding-left: 1.25rem; }
-  .recipe-grid .recipe > ol                { grid-area: meth;  margin: 0; padding-left: 1.25rem; }
-  .recipe-grid .recipe > p:last-of-type    { grid-area: links; margin: 1rem 0 0; }
+  .recipe-grid .recipe h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.4rem;
+  }
+
+  .recipe-grid .recipe ul,
+  .recipe-grid .recipe ol {
+    padding-left: 1.25rem;
+  }
+
+  .recipe-grid .recipe > p:last-child {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
 }
